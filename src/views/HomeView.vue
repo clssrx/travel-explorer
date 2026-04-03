@@ -3,6 +3,8 @@ import { computed, ref } from 'vue'
 import ExperienceCard from '../components/ExperienceCard.vue'
 import { experiences } from '../data/experiences'
 import type { Category } from '../types/experience'
+import SearchBar from '../components/SearchBar.vue'
+import CategoryFilter from '@/components/CategoryFilter.vue'
 
 type CategoryOption = 'All' | Category
 
@@ -24,7 +26,6 @@ const filteredExperiences = computed(() => {
     return matchesCategory && matchesSearch
   })
 })
-
 const categories: CategoryOption[] = ['All', 'Adventure', 'Culture', 'Food & Drink']
 </script>
 
@@ -38,32 +39,8 @@ const categories: CategoryOption[] = ['All', 'Adventure', 'Culture', 'Food & Dri
 
     <section class="section">
       <div class="filters-panel">
-        <div class="search-group">
-          <label class="filter-label" for="search">Search</label>
-          <input
-            id="search"
-            v-model="searchQuery"
-            class="search-input"
-            type="text"
-            placeholder="Search by title or location"
-          />
-        </div>
-
-        <div class="filter-group">
-          <p class="filter-label">Categories</p>
-          <div class="category-list">
-            <button
-              v-for="category in categories"
-              :key="category"
-              type="button"
-              class="category-button"
-              :class="{ active: selectedCategory === category }"
-              @click="selectedCategory = category"
-            >
-              {{ category }}
-            </button>
-          </div>
-        </div>
+        <SearchBar v-model="searchQuery" />
+        <CategoryFilter v-model="selectedCategory" :categories="categories" />
       </div>
     </section>
 
