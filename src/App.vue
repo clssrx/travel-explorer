@@ -19,5 +19,11 @@ const favoritesStore = useFavoritesStore()
     </header>
 
     <RouterView />
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <p>Built with Vue 3, TypeScript, Vue Router, and Pinia.</p>
+      </div>
+    </footer>
   </div>
 </template>
