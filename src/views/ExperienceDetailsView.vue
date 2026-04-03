@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
+import FavoriteButton from '../components/FavoriteButton.vue'
 import { experiences } from '../data/experiences'
 
+const route = useRoute()
+
 const experience = computed(() => {
-  const id = Number(useRoute().params.id)
-  return experiences.find((exp) => exp.id === id)
+  const id = Number(route.params.id)
+  return experiences.find((item) => item.id === id)
 })
 </script>
 
@@ -36,6 +39,10 @@ const experience = computed(() => {
           <p class="detail-description">
             {{ experience.description }}
           </p>
+
+          <div class="detail-actions">
+            <FavoriteButton :experience-id="experience.id" />
+          </div>
         </div>
       </div>
     </section>
