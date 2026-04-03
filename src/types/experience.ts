@@ -1,4 +1,4 @@
-type Category = 'Adventure' | 'Culture' | 'Food & Drink'
+export type Category = 'Adventure' | 'Culture' | 'Food & Drink'
 
 export interface Experience {
   id: number
