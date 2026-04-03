@@ -1,48 +1,83 @@
-# travel-explorer
+# Travel Explorer
 
-This template should help get you started developing with Vue 3 in Vite.
+Travel Explorer is a responsive single-page application built with Vue 3 and TypeScript for browsing curated travel experiences.
 
-## Recommended IDE Setup
+Users can search by keyword, filter by category, view detail pages, and save favorites with persistence through `localStorage`.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Screenshot
 
-## Recommended Browser Setup
+![Travel Explorer homepage](./docs/screenshot.png)
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Live Demo
 
-## Type Support for `.vue` Imports in TS
+[View the live app](https://travel-explorer-tau.vercel.app/)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Features
 
-## Customize configuration
+- Browse a curated catalog of travel experiences
+- Search by title or location
+- Filter by category
+- View dynamic experience detail pages
+- Save and remove favorites
+- Persist favorites across page refreshes with `localStorage`
+- Responsive layout for desktop and mobile
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## Tech Stack
 
-## Project Setup
+- Vue 3
+- TypeScript
+- Vite
+- Vue Router
+- Pinia
+- CSS
 
-```sh
+## Motivation
+
+I built this project to strengthen my Vue skills through a practical, product-focused exercise rather than a tutorial-only project.
+
+The goal was to build a clean and complete SPA that demonstrates reusable components, reactive state, client-side routing, and persistent user interactions.
+
+## Local Setup
+
+```bash
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## Production
 
-```sh
+```
 npm run build
+npm run preview
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## What This Project Demonstrates
 
-```sh
-npm run lint
+- reusable Vue components
+- typed props and typed data models
+- local state with ref and derived state with computed
+- two-way binding with v-model
+- route-based navigation with Vue Router
+- shared state management with Pinia
+- persistence with localStorage
+- clean separation between views, components, state, and data
+
+## Folder Structure
+
 ```
+src/
+  components/
+  views/
+  stores/
+  data/
+  router/
+  types/
+  assets/styles/
+```
+
+## Future Improvements
+
+- Add a 404 page
+- Replace mock data with a real API
+- Add automated tests
+- Expand the detail page with richer metadata

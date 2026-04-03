@@ -32,7 +32,6 @@ const categories: CategoryOption[] = ['All', 'Adventure', 'Culture', 'Food & Dri
 <template>
   <main class="app">
     <section class="hero">
-      <p class="eyebrow">Vue 3 + TypeScript</p>
       <h1>Travel Explorer</h1>
       <p class="subtitle">Discover curated travel experiences around the world.</p>
     </section>
