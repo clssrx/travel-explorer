@@ -252,8 +252,20 @@
   color: var(--color-text-soft);
 }
 
-.card-link {
+.card-media-link {
   display: block;
+}
+
+.card-title-link {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-title-link:hover .card-title {
+  text-decoration: underline;
+  text-decoration-color: var(--color-primary);
+  text-underline-offset: 0.18em;
 }
 
 .back-link {
@@ -314,5 +326,62 @@
 @media (max-width: 900px) {
   .detail-layout {
     grid-template-columns: 1fr;
+  }
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(10px);
+  background: rgba(252, 250, 247, 0.86);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header-inner {
+  width: min(var(--container-width), calc(100% - 2rem));
+  margin: 0 auto;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-heading);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav a {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.nav a.router-link-active {
+  color: var(--color-primary-strong);
+}
+
+.detail-actions {
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .site-header-inner {
+    min-height: auto;
+    padding: 0.9rem 0;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
