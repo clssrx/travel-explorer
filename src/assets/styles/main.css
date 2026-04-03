@@ -1,4 +1,8 @@
 @import './base.css';
+@import './base.css';
+@import './layout.css';
+@import './components.css';
+@import './views.css';
 
 .app {
   width: min(var(--container-width), calc(100% - 2rem));

@@ -39,7 +39,8 @@ function handleClick() {
     transform 0.2s ease,
     border-color 0.2s ease,
     background-color 0.2s ease,
-    color 0.2s ease;
+    color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .favorite-button:hover {
@@ -51,5 +52,6 @@ function handleClick() {
   background: var(--color-primary);
   border-color: var(--color-primary);
   color: white;
+  box-shadow: 0 8px 18px rgba(231, 111, 81, 0.2);
 }
 </style>
