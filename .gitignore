@@ -1,4 +1,12 @@
+# =========================
+# General
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
 # Logs
+# =========================
 logs
 *.log
 npm-debug.log*
@@ -7,33 +15,63 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-.DS_Store
-dist
-dist-ssr
-coverage
-*.local
+# =========================
+# Frontend (Vite / Vue)
+# =========================
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/coverage/
+frontend/*.local
+frontend/*.tsbuildinfo
+frontend/.eslintcache
 
-# Editor directories and files
+# Cypress
+frontend/cypress/videos/
+frontend/cypress/screenshots/
+
+# Vitest
+frontend/__screenshots__/
+
+# Vite
+frontend/*.timestamp-*-*.mjs
+
+# =========================
+# Backend (Django / Python)
+# =========================
+backend/.venv/
+backend/venv/
+backend/env/
+
+backend/__pycache__/
+backend/**/*.py[cod]
+backend/*.sqlite3
+backend/db.sqlite3
+
+backend/.pytest_cache/
+backend/.mypy_cache/
+backend/.ruff_cache/
+
+# Django collected/static/media (only if you add them later)
+backend/staticfiles/
+backend/media/
+
+# Environment files
+backend/.env
+frontend/.env
+frontend/.env.*
+backend/.env.*
+
+# =========================
+# Editor / IDE
+# =========================
 .vscode/*
 !.vscode/extensions.json
-.idea
+!.vscode/settings.json
+
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-
-*.tsbuildinfo
-
-.eslintcache
-
-# Cypress
-/cypress/videos/
-/cypress/screenshots/
-
-# Vitest
-__screenshots__/
-
-# Vite
-*.timestamp-*-*.mjs
